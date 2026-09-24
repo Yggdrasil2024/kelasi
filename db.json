@@ -1,5 +1,5 @@
 {
-    "eleve": [
+    "eleves": [
         {
             "id": "1",
             "nom": "BIKOUTA",
@@ -73,7 +73,7 @@
             "date": "2026-09-24T19:30:00Z"
         }
     ],
-    "matiere": [
+    "matieres": [
         {
             "id": "maths",
             "name": "Mathématiques"
