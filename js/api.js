@@ -1,0 +1,161 @@
+import fs from "fs/promises";
+
+const API_URL = "http://localhost:8000";
+
+/**
+ * fonction pour faire des appel d'api dynamique
+ *
+ * @param {*} endpoint - endpoint demandé
+ * @param {*} opts - le payload de l'appel d'API
+ * @returns promise - donnée en format json
+ */
+const request = async (endpoint, opts = {}) => {
+    try {
+        const response = await fetch(`${API_URL}${endpoint}`, {
+            headers: {
+                "Content-Type": "application/json",
+                ...opts.headers,
+            },
+            ...opts,
+        });
+
+        if (!response.ok) {
+            throw new Error(
+                `Erreur HTTP : ${response.status} (${response.statusText})`,
+            );
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error(`[API Error] sur ${endpoint}:`, error);
+        throw error;
+    }
+};
+
+/* ======================
+ *  eleves
+ * ====================== */
+
+/**
+ * fonction pour recupérer tous les élèves
+ *
+ * @returns promise - appel d'API
+ */
+const getAllStudents = async () => {
+    return await request("/eleves");
+};
+
+/**
+ * fonction pour recupérer un élève par son id
+ * @param {number} id - l'ID de l'élève
+ * @returns promise - appel d'API
+ */
+const getStudent = async (id) => {
+    return await request(`/eleves/${id}`);
+};
+
+/* ======================
+ *  progres
+ * ====================== */
+
+/**
+ * fonction pour recupérer le progres d'un élève dans une matière
+ *
+ * @param {*} std - l'ID de l'élève
+ * @param {*} mtr - l'ID de la matière
+ * @returns promise - la promesse de la requête API
+ */
+const getProgress = async (std = 1, mtr = "maths") => {
+    const allProgress = await request("/progres");
+
+    return allProgress.filter(
+        (item) => item.eleve_id === String(std) && item.matiere_id === mtr,
+    );
+};
+
+/**
+ * fonction pour recupérer le progres d'un élève
+ * toutes matieres confonduespar son id
+ *
+ * @param {number} id
+ * @returns
+ */
+const getProgresByStudent = (id) => {
+    return request(`/progres?eleve_id=${id}`);
+};
+
+/**
+ * fonction pour ajouter un nouveau progres
+ *
+ * @param {*} progresData - les données du progres à ajouter
+ * @returns promise - requête API
+ */
+const addProgress = (progresData) => {
+    return request("/progres", {
+        method: "POST",
+        body: JSON.stringify(progresData),
+    });
+};
+
+/**
+ * fonction pour mettre a jour un progres existant
+ *
+ * @param {number} id - l'ID du progres à mettre à jour
+ * @param {object} progresData - données du progres à modifier
+ * @returns promise - requête API
+ */
+const updateProgres = (id, progresData) => {
+    return request(`/progres/${id}`, {
+        method: "PATCH",
+        body: JSON.stringify(progresData),
+    });
+};
+
+/* ======================
+ *  matieres
+ *  ====================== */
+
+/**
+ * fonction pour recupérer toutes les matières
+ *
+ * @returns promise - appel d'API
+ */
+const getMatieres = async () => {
+    return await request("/matieres");
+};
+
+/**
+ * fonction pour recupérer une matière par son id
+ *
+ * @param {*} id - l'ID de la matière
+ * @returns promise - apel d'API
+ */
+const getMatiere = async (id) => {
+    return await request(`/matieres/${id}`);
+};
+
+try {
+    /*console.log(await getAllStudents());
+    console.log(await getStudent(1));
+    console.log(await getProgress(1, "maths"));
+    console.log(
+        await addProgress({
+            id: "a61aKK",
+            eleve_id: "1",
+            matiere_id: "maths",
+            question_repondus: 27,
+            total_question: 67,
+            best_score: 10,
+            dernier_score: 7,
+        }),
+    );*/
+    //console.log(await getMatieres());
+    console.log(await getMatiere("maths"));
+} catch (error) {
+    console.error("Erreur lors de l'appel à l'API :", error);
+    fs.writeFile(
+        "api_errors.log",
+        `Erreur lors de l'appel à l'API : ${error.message}\n`,
+        { flag: "a" },
+    );
+}
