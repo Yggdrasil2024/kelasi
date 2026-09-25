@@ -48,6 +48,62 @@
                         <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme ton mot de passe" required>
                     </div>
 
+                    <div class="form-group">
+                        <label for="level">Niveau</label>
+                        <select id="level" name="level" required>
+                            <option value="">Choisis ton niveau</option>
+                            <option value="BEPC">BEPC</option>
+                            <option value="BAC">Bac</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Les matières que tu souhaites réviser</label>
+                        <p class="form-help">Tu peux sélectionner une ou plusieurs matières.</p>
+
+                        <div class="subjects-selection">
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="mathematiques">
+                                <span>Mathématiques</span>
+                            </label>
+
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="francais">
+                                <span>Français</span>
+                            </label>
+
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="histoire">
+                                <span>Histoire</span>
+                            </label>
+
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="geographie">
+                                <span>Géographie</span>
+                            </label>
+
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="svt">
+                                <span>SVT</span>
+                            </label>
+
+                            <label class="subject-option">
+                               <input type="checkbox" name="subjects" value="physique">
+                               <span>Physique</span>
+                            </label>
+
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="chimie">
+                                <span>Chimie</span>
+                            </label>
+
+                            <label class="subject-option">
+                                <input type="checkbox" name="subjects" value="anglais">
+                                <span>Anglais</span>
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="form-options">
                         <label class="checkbox-label">
                             <input type="checkbox" name="terms" required>
@@ -55,7 +111,9 @@
                         </label>
                     </div>
 
-                    <button type="submit" class="btn btn-primary auth-button">Créer mon compte</button>
+                    <button type="submit" class="btn btn-primary auth-button">
+                        Créer mon compte
+                    </button>
                 </form>
 
                 <div class="auth-footer">
