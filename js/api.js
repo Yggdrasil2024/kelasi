@@ -41,7 +41,7 @@ const request = async (endpoint, opts = {}) => {
  *
  * @returns promise - appel d'API
  */
-const getAllStudents = async () => {
+export const getAllStudents = async () => {
     return await request("/eleves");
 };
 
@@ -50,7 +50,7 @@ const getAllStudents = async () => {
  * @param {number} id - l'ID de l'élève
  * @returns promise - appel d'API
  */
-const getStudent = async (id) => {
+export const getStudent = async (id) => {
     return await request(`/eleves/${id}`);
 };
 
@@ -65,7 +65,7 @@ const getStudent = async (id) => {
  * @param {*} mtr - l'ID de la matière
  * @returns promise - la promesse de la requête API
  */
-const getProgress = async (std = 1, mtr = "maths") => {
+export const getProgress = async (std = 1, mtr = "maths") => {
     const allProgress = await request("/progres");
 
     return allProgress.filter(
@@ -80,7 +80,7 @@ const getProgress = async (std = 1, mtr = "maths") => {
  * @param {number} id
  * @returns
  */
-const getProgresByStudent = (id) => {
+export const getProgresByStudent = (id) => {
     return request(`/progres?eleve_id=${id}`);
 };
 
@@ -90,7 +90,7 @@ const getProgresByStudent = (id) => {
  * @param {*} progresData - les données du progres à ajouter
  * @returns promise - requête API
  */
-const addProgress = (progresData) => {
+export const addProgress = (progresData) => {
     return request("/progres", {
         method: "POST",
         body: JSON.stringify(progresData),
@@ -104,7 +104,7 @@ const addProgress = (progresData) => {
  * @param {object} progresData - données du progres à modifier
  * @returns promise - requête API
  */
-const updateProgres = (id, progresData) => {
+export const updateProgres = (id, progresData) => {
     return request(`/progres/${id}`, {
         method: "PATCH",
         body: JSON.stringify(progresData),
@@ -120,7 +120,7 @@ const updateProgres = (id, progresData) => {
  *
  * @returns promise - appel d'api
  */
-const getResultats = async () => {
+export const getResultats = async () => {
     return await request("/resultats");
 };
 
@@ -130,7 +130,7 @@ const getResultats = async () => {
  * @param {number} id
  * @returns promise - appel d'API
  */
-const getResultatByStudent = async (id) => {
+export const getResultatByStudent = async (id) => {
     return await request(`/resultats?eleve_id=${id}`);
 };
 
@@ -140,7 +140,7 @@ const getResultatByStudent = async (id) => {
  * @param {object} resData - les données du resultat à ajouter
  * @returns promise - appel d'API
  */
-const addResultat = async (resData) => {
+export const addResultat = async (resData) => {
     return await request("/resultats", {
         method: "POST",
         body: JSON.stringify(resData),
@@ -156,7 +156,7 @@ const addResultat = async (resData) => {
  *
  * @returns promise - appel d'API
  */
-const getQuestions = async () => {
+export const getQuestions = async () => {
     return await request("/questions");
 };
 
@@ -165,7 +165,7 @@ const getQuestions = async () => {
  *
  * @param {*} matiere - la matière
  */
-const getQuestionsByMatiere = async (matiere) => {
+export const getQuestionsByMatiere = async (matiere) => {
     return await request(`/questions?matiere_id=${matiere}`);
 };
 /* ======================
@@ -177,7 +177,7 @@ const getQuestionsByMatiere = async (matiere) => {
  *
  * @returns promise - appel d'API
  */
-const getMatieres = async () => {
+export const getMatieres = async () => {
     return await request("/matieres");
 };
 
@@ -187,7 +187,7 @@ const getMatieres = async () => {
  * @param {*} id - l'ID de la matière
  * @returns promise - apel d'API
  */
-const getMatiere = async (id) => {
+export const getMatiere = async (id) => {
     return await request(`/matieres/${id}`);
 };
 
