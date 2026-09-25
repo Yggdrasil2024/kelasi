@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Tableau de bord KELASI">
+<title>Tableau de bord - KELASI</title>
+<link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar container">
+        <a href="index.html" class="logo">KELASI</a>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Tableau de bord</a>
+            <a href="#matieres">Mes matières</a>
+            <a href="leaderboard.html">Classement</a>
+            <a href="profile.html">Profil</a>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="dashboard-hero">
+        <div class="container">
+            <span class="section-label">Mon espace</span>
+            <h1>Bonjour, bienvenue sur KELASI </h1>
+            <p>Continue tes révisions et progresse à ton rythme.</p>
+        </div>
+    </section>
+
+    <section class="section">
+    <div class="container">
+
+        <div class="dashboard-progress card">
+        <div>
+        <span class="section-label">Ma progression</span>
+        <h2>Progression générale</h2>
+        <p>Continue tes efforts pour atteindre tes objectifs.</p>
+    </div>
+
+    <div class="progress-value">72%</div>
+
+    <div class="progress-bar">
+    <div class="progress-bar-fill"></div>
+    </div>
+    </div>
+
+    <div class="section-title dashboard-section-title" id="matieres">
+        <span class="section-label">Mes matières</span>
+        <h2>Continue tes révisions</h2>
+        <p>Choisis une matière pour accéder aux quiz.</p>
+    </div>
+
+    <div class="subjects-grid">
+        <article class="card subject-card">
+            <div class="subject-icon">M</div>
+            <h3>Mathématiques</h3>
+            <p>8 quiz réalisés</p>
+            <span class="subject-progress">75% de progression</span>
+            <a href="quiz.html" class="btn btn-primary">Voir les chapitres</a>
+        </article>
+
+        <article class="card subject-card">
+            <div class="subject-icon">F</div>
+            <h3>Français</h3>
+            <p>6 quiz réalisés</p>
+            <span class="subject-progress">60% de progression</span>
+            <a href="quiz.html" class="btn btn-primary">Voir les chapitres</a>
+        </article>
+
+        <article class="card subject-card">
+            <div class="subject-icon">SVT</div>
+            <h3>SVT</h3>
+            <p>12 quiz réalisés</p>
+            <span class="subject-progress">82% de progression</span>
+            <a href="quiz.html" class="btn btn-primary">Voir les chapitres</a>
+        </article>
+
+        <article class="card subject-card">
+            <div class="subject-icon">H</div>
+            <h3>Histoire</h3>
+            <p>4 chapitres disponibles</p>
+            <span class="subject-progress">À commencer</span>
+            <a href="chapters.html" class="btn btn-primary">Voir les chapitres</a>
+        </article>
+    </div>
+
+    <div class="dashboard-grid">
+
+    <div class="card">
+        <span class="section-label">À continuer</span>
+        <h2>Dernière révision</h2>
+        <h3>Équations du premier degré</h3>
+        <p>Mathématiques · 10 questions</p>
+        <a href="quiz.html" class="btn btn-primary">Continuer</a>
+    </div>
+
+    <div class="card">
+        <span class="section-label">Conseil</span>
+        <h2>Conseil de révision</h2>
+        <p>Tu peux améliorer ta progression en mathématiques. Essaie de refaire quelques exercices cette semaine.</p>
+    </div>
+
+    </div>
+
+    <div class="card recent-activity">
+    <span class="section-label">Activité récente</span>
+    <h2>Mes dernières activités</h2>
+
+    <div class="activity-item">
+    <div>
+    <h3>Quiz Mathématiques</h3>
+    <p>Équations du premier degré</p>
+    </div>
+    <strong>8/10</strong>
+    </div>
+
+    <div class="activity-item">
+    <div>
+    <h3>Quiz SVT</h3>
+    <p>La cellule</p>
+    </div>
+    <strong>9/10</strong>
+    </div>
+
+    <div class="activity-item">
+    <div>
+    <h3>Quiz Français</h3>
+    <p>Grammaire</p>
+    </div>
+    <strong>7/10</strong>
+    </div>
+    </div>
+
+    </div>
+    </section>
+</main>
+
+<footer class="footer">
+<div class="container footer-content">
+<div>
+<a href="index.html" class="logo">KELASI</a>
+<p>Révisions BEPC & Bac en ligne.</p>
+</div>
+<p>@ 2026 KELASI. Tous droits réservés.</p>
+</div>
+</footer>
+
+<script src="./assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quiz de révision KELASI">
+    <title>Quiz - KELASI</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">KELASI</a>
+            <div class="nav-links">
+                <a href="dashboard.html">Tableau de bord</a>
+                <a href="leaderboard.html">Classement</a>
+                <a href="profile.html">Profil</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="quiz-section">
+            <div class="container">
+                <div class="quiz-header">
+                    <div>
+                        <span class="section-label" id="quiz-subject">Histoire</span>
+                        <h1 id="quiz-title">Première Guerre mondiale</h1>
+                    </div>
+                    <span class="quiz-counter" id="quiz-counter">Question 1 sur 2</span>
+                </div>
+
+                <div class="quiz-progress">
+                    <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+                </div>
+                <div class="quiz-card card">
+                    <span class="question-number" id="question-number">Question 1</span>
+                    <h2 id="question-text">Chargement de la question...</h2>
+
+                   <div class="answers" id="answers-container"></div>
+
+                    <button type="button" class="btn btn-primary quiz-button" id="validate-button">
+                        Valider ma réponse
+                    </button>
+
+                    <div class="quiz-feedback" id="quiz-feedback"></div>
+                </div>
+
+                <div class="quiz-result card" id="quiz-result">
+    <h2>Quiz terminé</h2>
+
+    <div class="result-score">
+        <span id="score-text"></span>
+        <strong id="score-percentage"></strong>
+    </div>
+
+    <div class="result-details">
+        <p>Bonnes réponses : <span id="correct-count">0</span></p>
+        <p>Mauvaises réponses : <span id="incorrect-count">0</span></p>
+    </div>
+
+    <div class="result-actions">
+        <button type="button" class="btn btn-primary" id="restart-button">
+            Recommencer
+        </button>
+
+        <a href="chapters.html" class="btn btn-secondary">
+            Retour aux chapitres
+        </a>
+    </div>
+</div>
+           </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <a href="index.html" class="logo">KELASI</a>
+                <p>Révisions BEPC & Bac en ligne.</p>
+            </div>
+            <p>@ 2026 KELASI. Tous droits réservés.</p>
+        </div>
+    </footer>
+   
+    <script src="./assets/js/app.js"></script>
+    
+</body>
+</html>
