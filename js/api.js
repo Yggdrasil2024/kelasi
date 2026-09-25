@@ -112,6 +112,42 @@ const updateProgres = (id, progresData) => {
 };
 
 /* ======================
+ *  resultats
+ *  ====================== */
+
+/**
+ * fonction pour recupérer tous les resultats
+ *
+ * @returns promise - appel d'api
+ */
+const getResultats = async () => {
+    return await request("/resultats");
+};
+
+/**
+ * fonction pour recupérer les resultats d'un élève par son id
+ *
+ * @param {number} id
+ * @returns promise - appel d'API
+ */
+const getResultatByStudent = async (id) => {
+    return await request(`/resultats?eleve_id=${id}`);
+};
+
+/**
+ * fonction permettant d'ajouter un nouveau resultat
+ *
+ * @param {object} resData - les données du resultat à ajouter
+ * @returns promise - appel d'API
+ */
+const addResultat = async (resData) => {
+    return await request("/resultats", {
+        method: "POST",
+        body: JSON.stringify(resData),
+    });
+};
+
+/* ======================
  *  matieres
  *  ====================== */
 
@@ -150,7 +186,21 @@ try {
         }),
     );*/
     //console.log(await getMatieres());
-    console.log(await getMatiere("maths"));
+    //console.log(await getMatiere("maths"));
+    console.log(await getResultats());
+    console.log(await getResultatByStudent(1));
+    console.log(
+        await addResultat({
+            id: "a61aKK",
+            eleve_id: "1",
+            matiere_id: "maths",
+            score: 10,
+            date: "2023-09-15",
+        }),
+    );
+    console.log(await getProgresByStudent(1));
+    console.log(await updateProgres("p1", { best_score: 12 }));
+    console.log(await getProgress(1, "maths"));
 } catch (error) {
     console.error("Erreur lors de l'appel à l'API :", error);
     fs.writeFile(
