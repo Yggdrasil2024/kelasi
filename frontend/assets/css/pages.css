@@ -600,3 +600,121 @@
         flex-direction: column;
     }
 }
+
+
+/* ========================================
+   QUIZ
+   ======================================== */
+
+.quiz-section {
+    min-height: calc(100vh - 145px);
+    padding: 60px 0;
+}
+
+.quiz-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.quiz-header h1 {
+    margin-top: 8px;
+    font-size: 2rem;
+}
+
+.quiz-counter {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.quiz-progress {
+    width: 100%;
+    height: 8px;
+    margin-bottom: 35px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--border-color);
+}
+
+.quiz-progress-fill {
+    width: 10%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary);
+}
+
+.quiz-card {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.question-number {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.quiz-card h2 {
+    margin: 12px 0 30px;
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.answer-option {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 18px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.answer-option:hover {
+    border-color: var(--primary);
+    background: #f8fbff;
+}
+
+.answer-option input {
+    accent-color: var(--primary);
+}
+
+.answer-option span {
+    font-size: 0.95rem;
+}
+
+.quiz-button {
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .quiz-section {
+        padding: 40px 20px;
+    }
+
+    .quiz-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .quiz-header h1 {
+        font-size: 1.6rem;
+    }
+
+    .quiz-card {
+        padding: 25px 20px;
+    }
+}
