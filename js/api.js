@@ -148,6 +148,27 @@ const addResultat = async (resData) => {
 };
 
 /* ======================
+ *  questions
+ *  ====================== */
+
+/**
+ * fonction pour recupérer toutes les questions
+ *
+ * @returns promise - appel d'API
+ */
+const getQuestions = async () => {
+    return await request("/questions");
+};
+
+/**
+ * fonction pour recupérer les question selon la matière
+ *
+ * @param {*} matiere - la matière
+ */
+const getQuestionsByMatiere = async (matiere) => {
+    return await request(`/questions?matiere_id=${matiere}`);
+};
+/* ======================
  *  matieres
  *  ====================== */
 
@@ -184,7 +205,7 @@ try {
             best_score: 10,
             dernier_score: 7,
         }),
-    );*/
+    );
     //console.log(await getMatieres());
     //console.log(await getMatiere("maths"));
     console.log(await getResultats());
@@ -200,7 +221,8 @@ try {
     );
     console.log(await getProgresByStudent(1));
     console.log(await updateProgres("p1", { best_score: 12 }));
-    console.log(await getProgress(1, "maths"));
+    console.log(await getProgress(1, "maths"));*/
+    console.log(await getQuestions());
 } catch (error) {
     console.error("Erreur lors de l'appel à l'API :", error);
     fs.writeFile(
