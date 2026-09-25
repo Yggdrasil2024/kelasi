@@ -1,200 +1,270 @@
 {
-    "eleves": [
-        {
-            "id": "1",
-            "nom": "BIKOUTA",
-            "prenom": "Guyverna",
-            "points": 120,
-            "password": "password123"
-        },
-        {
-            "id": "2",
-            "nom": "MABELEMO",
-            "prenom": "Souveraine",
-            "points": 95,
-            "password": "password123"
-        },
-        {
-            "id": "3",
-            "nom": "LOUKINZOU",
-            "prenom": "Jaurez",
-            "points": 110,
-            "password": "password123"
-        }
-    ],
-    "progres": [
-        {
-            "id": "p1",
-            "eleve_id": "1",
-            "matiere_id": "maths",
-            "question_repondus": 10,
-            "total_question": 20,
-            "best_score": 9,
-            "dernier_score": 8
-        },
-        {
-            "id": "p2",
-            "eleve_id": "1",
-            "matiere_id": "svt",
-            "question_repondus": 5,
-            "total_question": 15,
-            "best_score": 4,
-            "dernier_score": 4
-        },
-        {
-            "id": "p3",
-            "eleve_id": "2",
-            "matiere_id": "anglais",
-            "question_repondus": 8,
-            "total_question": 10,
-            "best_score": 7,
-            "dernier_score": 7
-        }
-    ],
-    "resultats": [
-        {
-            "id": "r1",
-            "eleve_id": "1",
-            "matiere_id": "maths",
-            "score": 8,
-            "total_questions": 10,
-            "bonnes_reponses": 8,
-            "fausse_reponses": 2,
-            "date": "2026-09-24T18:00:00Z"
-        },
-        {
-            "id": "r2",
-            "eleve_id": "2",
-            "matiere_id": "anglais",
-            "score": 7,
-            "total_questions": 10,
-            "bonnes_reponses": 7,
-            "fausse_reponses": 3,
-            "date": "2026-09-24T19:30:00Z"
-        }
-    ],
-    "matieres": [
-        {
-            "id": "maths",
-            "name": "Mathématiques"
-        },
-        {
-            "id": "anglais",
-            "name": "Anglais"
-        },
-        {
-            "id": "svt",
-            "name": "SVT"
-        }
-    ],
-    "questions": [
-        {
-            "id": "101",
-            "matiere_id": "maths",
-            "question": "Quelle est la valeur de x si 2x + 4 = 10 ?",
-            "options": ["x = 2", "x = 3", "x = 4"],
-            "reponse": "x = 3",
-            "explication": "2x = 10 - 4 => 2x = 6 => x = 3."
-        },
-        {
-            "id": "102",
-            "matiere_id": "maths",
-            "question": "Quel est le carré de 9 ?",
-            "options": ["18", "72", "81"],
-            "reponse": "81",
-            "explication": "9 × 9 = 81."
-        },
-        {
-            "id": "103",
-            "matiere_id": "maths",
-            "question": "Quelle est la valeur de l'hypoténuse d'un triangle rectangle dont les côtés mesurent 3 cm et 4 cm ?",
-            "options": ["5 cm", "6 cm", "7 cm"],
-            "reponse": "5 cm",
-            "explication": "Selon le théorème de Pythagore : √(3² + 4²) = √(9 + 16) = √25 = 5 cm."
-        },
-        {
-            "id": "104",
-            "matiere_id": "maths",
-            "question": "Que vaut 15% de 200 ?",
-            "options": ["20", "30", "40"],
-            "reponse": "30",
-            "explication": "(15 / 100) × 200 = 15 × 2 = 30."
-        },
-        {
-            "id": "105",
-            "matiere_id": "maths",
-            "question": "Résoudre l'équation : x² - 16 = 0",
-            "options": ["x = 4 uniquement", "x = -4 et x = 4", "x = 16"],
-            "reponse": "x = -4 et x = 4",
-            "explication": "x² = 16 d'où x = √16 ou x = -√16, ce qui donne 4 et -4."
-        },
-        {
-            "id": "201",
-            "matiere_id": "anglais",
-            "question": "Complete the sentence: 'She ___ to school every day.'",
-            "options": ["go", "goes", "going"],
-            "reponse": "goes",
-            "explication": "Au présent simple avec la 3e personne du singulier ('she'), on ajoute -es au verbe go."
-        },
-        {
-            "id": "202",
-            "matiere_id": "anglais",
-            "question": "What is the past tense of the verb 'to write'?",
-            "options": ["writed", "wrote", "written"],
-            "reponse": "wrote",
-            "explication": "'To write' est un verbe irrégulier. Son prétérit est 'wrote'."
-        },
-        {
-            "id": "203",
-            "matiere_id": "anglais",
-            "question": "Choose the correct pronoun: 'Paul and I completed ___ project.'",
-            "options": ["our", "their", "your"],
-            "reponse": "our",
-            "explication": "Puisqu'il s'agit de 'Paul et moi' (nous), le déterminant possessif correspondant est 'our'."
-        },
-        {
-            "id": "204",
-            "matiere_id": "anglais",
-            "question": "What is the opposite of the adjective 'expensive'?",
-            "options": ["cheap", "heavy", "difficult"],
-            "reponse": "cheap",
-            "explication": "'Expensive' signifie cher, et son contraire est 'cheap' (bon marché)."
-        },
-        {
-            "id": "301",
-            "matiere_id": "svt",
-            "question": "Quel organe est responsable de la circulation du sang ?",
-            "options": ["Le poumon", "Le cœur", "Le foie"],
-            "reponse": "Le cœur",
-            "explication": "Le cœur agit comme une pompe qui propulse le sang dans tout l'organisme."
-        },
-        {
-            "id": "302",
-            "matiere_id": "svt",
-            "question": "Où se déroule la photosynthèse chez les plantes ?",
-            "options": [
-                "Dans les racines",
-                "Dans les feuilles",
-                "Dans les fleurs"
-            ],
-            "reponse": "Dans les feuilles",
-            "explication": "La photosynthèse a lieu principalement dans les chloroplastes situés dans les cellules des feuilles."
-        },
-        {
-            "id": "303",
-            "matiere_id": "svt",
-            "question": "Combien de chromosomes possède une cellule humaine normale ?",
-            "options": ["23", "46", "48"],
-            "reponse": "46",
-            "explication": "Une cellule humaine contient 46 chromosomes répartis en 23 paires."
-        },
-        {
-            "id": "304",
-            "matiere_id": "svt",
-            "question": "Quel gaz est rejeté par l'Homme lors de l'expiration ?",
-            "options": ["Le dioxygène", "Le dioxyde de carbone", "L'azote"],
-            "reponse": "Le dioxyde de carbone",
-            "explication": "Lors de la respiration, le corps absorbe du dioxygène et rejette du dioxyde de carbone (CO2)."
-        }
-    ]
+  "eleves": [
+    {
+      "id": "1",
+      "nom": "BIKOUTA",
+      "prenom": "Guyverna",
+      "points": 120,
+      "password": "password123"
+    },
+    {
+      "id": "2",
+      "nom": "MABELEMO",
+      "prenom": "Souveraine",
+      "points": 95,
+      "password": "password123"
+    },
+    {
+      "id": "3",
+      "nom": "LOUKINZOU",
+      "prenom": "Jaurez",
+      "points": 110,
+      "password": "password123"
+    }
+  ],
+  "progres": [
+    {
+      "id": "p1",
+      "eleve_id": "1",
+      "matiere_id": "maths",
+      "question_repondus": 10,
+      "total_question": 20,
+      "best_score": 12,
+      "dernier_score": 8
+    },
+    {
+      "id": "p2",
+      "eleve_id": "1",
+      "matiere_id": "svt",
+      "question_repondus": 5,
+      "total_question": 15,
+      "best_score": 4,
+      "dernier_score": 4
+    },
+    {
+      "id": "p3",
+      "eleve_id": "2",
+      "matiere_id": "anglais",
+      "question_repondus": 8,
+      "total_question": 10,
+      "best_score": 7,
+      "dernier_score": 7
+    }
+  ],
+  "resultats": [
+    {
+      "id": "r1",
+      "eleve_id": "1",
+      "matiere_id": "maths",
+      "score": 8,
+      "total_questions": 10,
+      "bonnes_reponses": 8,
+      "fausse_reponses": 2,
+      "date": "2026-09-24T18:00:00Z"
+    },
+    {
+      "id": "r2",
+      "eleve_id": "2",
+      "matiere_id": "anglais",
+      "score": 7,
+      "total_questions": 10,
+      "bonnes_reponses": 7,
+      "fausse_reponses": 3,
+      "date": "2026-09-24T19:30:00Z"
+    },
+    {
+      "id": "wgGdbGI_xrY",
+      "eleve_id": "1",
+      "matiere_id": "maths",
+      "score": 10,
+      "date": "2023-09-15"
+    },
+    {
+      "id": "Zk-X88xCp8o",
+      "eleve_id": "1",
+      "matiere_id": "maths",
+      "score": 10,
+      "date": "2023-09-15"
+    },
+    {
+      "id": "W4a-AbUquvA",
+      "eleve_id": "1",
+      "matiere_id": "maths",
+      "score": 10,
+      "date": "2023-09-15"
+    }
+  ],
+  "matieres": [
+    {
+      "id": "maths",
+      "name": "Mathématiques"
+    },
+    {
+      "id": "anglais",
+      "name": "Anglais"
+    },
+    {
+      "id": "svt",
+      "name": "SVT"
+    }
+  ],
+  "questions": [
+    {
+      "id": "101",
+      "matiere_id": "maths",
+      "question": "Quelle est la valeur de x si 2x + 4 = 10 ?",
+      "options": [
+        "x = 2",
+        "x = 3",
+        "x = 4"
+      ],
+      "reponse": "x = 3",
+      "explication": "2x = 10 - 4 => 2x = 6 => x = 3."
+    },
+    {
+      "id": "102",
+      "matiere_id": "maths",
+      "question": "Quel est le carré de 9 ?",
+      "options": [
+        "18",
+        "72",
+        "81"
+      ],
+      "reponse": "81",
+      "explication": "9 × 9 = 81."
+    },
+    {
+      "id": "103",
+      "matiere_id": "maths",
+      "question": "Quelle est la valeur de l'hypoténuse d'un triangle rectangle dont les côtés mesurent 3 cm et 4 cm ?",
+      "options": [
+        "5 cm",
+        "6 cm",
+        "7 cm"
+      ],
+      "reponse": "5 cm",
+      "explication": "Selon le théorème de Pythagore : √(3² + 4²) = √(9 + 16) = √25 = 5 cm."
+    },
+    {
+      "id": "104",
+      "matiere_id": "maths",
+      "question": "Que vaut 15% de 200 ?",
+      "options": [
+        "20",
+        "30",
+        "40"
+      ],
+      "reponse": "30",
+      "explication": "(15 / 100) × 200 = 15 × 2 = 30."
+    },
+    {
+      "id": "105",
+      "matiere_id": "maths",
+      "question": "Résoudre l'équation : x² - 16 = 0",
+      "options": [
+        "x = 4 uniquement",
+        "x = -4 et x = 4",
+        "x = 16"
+      ],
+      "reponse": "x = -4 et x = 4",
+      "explication": "x² = 16 d'où x = √16 ou x = -√16, ce qui donne 4 et -4."
+    },
+    {
+      "id": "201",
+      "matiere_id": "anglais",
+      "question": "Complete the sentence: 'She ___ to school every day.'",
+      "options": [
+        "go",
+        "goes",
+        "going"
+      ],
+      "reponse": "goes",
+      "explication": "Au présent simple avec la 3e personne du singulier ('she'), on ajoute -es au verbe go."
+    },
+    {
+      "id": "202",
+      "matiere_id": "anglais",
+      "question": "What is the past tense of the verb 'to write'?",
+      "options": [
+        "writed",
+        "wrote",
+        "written"
+      ],
+      "reponse": "wrote",
+      "explication": "'To write' est un verbe irrégulier. Son prétérit est 'wrote'."
+    },
+    {
+      "id": "203",
+      "matiere_id": "anglais",
+      "question": "Choose the correct pronoun: 'Paul and I completed ___ project.'",
+      "options": [
+        "our",
+        "their",
+        "your"
+      ],
+      "reponse": "our",
+      "explication": "Puisqu'il s'agit de 'Paul et moi' (nous), le déterminant possessif correspondant est 'our'."
+    },
+    {
+      "id": "204",
+      "matiere_id": "anglais",
+      "question": "What is the opposite of the adjective 'expensive'?",
+      "options": [
+        "cheap",
+        "heavy",
+        "difficult"
+      ],
+      "reponse": "cheap",
+      "explication": "'Expensive' signifie cher, et son contraire est 'cheap' (bon marché)."
+    },
+    {
+      "id": "301",
+      "matiere_id": "svt",
+      "question": "Quel organe est responsable de la circulation du sang ?",
+      "options": [
+        "Le poumon",
+        "Le cœur",
+        "Le foie"
+      ],
+      "reponse": "Le cœur",
+      "explication": "Le cœur agit comme une pompe qui propulse le sang dans tout l'organisme."
+    },
+    {
+      "id": "302",
+      "matiere_id": "svt",
+      "question": "Où se déroule la photosynthèse chez les plantes ?",
+      "options": [
+        "Dans les racines",
+        "Dans les feuilles",
+        "Dans les fleurs"
+      ],
+      "reponse": "Dans les feuilles",
+      "explication": "La photosynthèse a lieu principalement dans les chloroplastes situés dans les cellules des feuilles."
+    },
+    {
+      "id": "303",
+      "matiere_id": "svt",
+      "question": "Combien de chromosomes possède une cellule humaine normale ?",
+      "options": [
+        "23",
+        "46",
+        "48"
+      ],
+      "reponse": "46",
+      "explication": "Une cellule humaine contient 46 chromosomes répartis en 23 paires."
+    },
+    {
+      "id": "304",
+      "matiere_id": "svt",
+      "question": "Quel gaz est rejeté par l'Homme lors de l'expiration ?",
+      "options": [
+        "Le dioxygène",
+        "Le dioxyde de carbone",
+        "L'azote"
+      ],
+      "reponse": "Le dioxyde de carbone",
+      "explication": "Lors de la respiration, le corps absorbe du dioxygène et rejette du dioxyde de carbone (CO2)."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
