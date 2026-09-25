@@ -323,3 +323,162 @@
         text-align: center;
     }
 }   
+
+
+
+/* ========================================
+   DASHBOARD
+   ======================================== */
+
+.dashboard-hero {
+    padding: 60px 0 40px;
+    background: var(--white);
+}
+
+.dashboard-hero h1 {
+    margin: 10px 0;
+    font-size: 2.2rem;
+}
+
+.dashboard-hero p {
+    color: var(--text-light);
+}
+
+.dashboard-progress {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.dashboard-progress h2 {
+    margin-bottom: 8px;
+}
+
+.dashboard-progress p {
+    color: var(--text-light);
+}
+
+.progress-value {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    color: var(--primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    margin-top: 24px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--border-color);
+}
+
+.progress-bar-fill {
+    width: 72%;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--primary);
+}
+
+.dashboard-section-title {
+    margin-bottom: 30px;
+}
+
+.subject-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.subject-card .subject-progress {
+    margin: 8px 0 20px;
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.subject-card .btn {
+    width: fit-content;
+    margin-top: auto;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.dashboard-grid h2 {
+    margin-bottom: 16px;
+}
+
+.dashboard-grid h3 {
+    margin-bottom: 6px;
+}
+
+.dashboard-grid p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+.recent-activity {
+    margin-top: 24px;
+}
+
+.recent-activity h2 {
+    margin-bottom: 20px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item h3 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+.activity-item p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.activity-item strong {
+    color: var(--primary);
+}
+
+@media (max-width: 700px) {
+    .dashboard-hero {
+        padding: 40px 0 30px;
+    }
+
+    .dashboard-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .progress-value {
+        position: static;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-item {
+        align-items: flex-start;
+    }
+}
