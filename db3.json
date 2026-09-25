@@ -1,0 +1,58 @@
+{
+    "eleve": [
+        {
+            "id": "1",
+            "nom": "BIKOUTA",
+            "prenom": "",
+            "points": "",
+            "password": ""
+        }
+    ],
+    "progres": [
+        {
+            "id": "",
+            "eleve_id": "1",
+            "matiere_id": "maths",
+            "question_repondus": 10,
+            "total_question": 20,
+            "best_score": 9,
+            "dernier_score": 8
+        }
+    ],
+    "resultats": [
+        {
+            "id": "",
+            "eleve_id": "1",
+            "matiere_id": "maths",
+            "score": 8,
+            "total_questions": 10,
+            "bonnes_reponses": 8,
+            "fausse_reponses": 2,
+            "date": "2026-09-24T18:00:00Z"
+        }
+    ],
+    "matiere": [
+        {
+            "id": "maths",
+            "name": "mathématiques"
+        },
+        {
+            "id": "anglais",
+            "name": "anglais"
+        },
+        {
+            "id": "svt",
+            "name": "SVT"
+        }
+    ],
+    "questions": [
+        {
+            "id": "101",
+            "matiere_id": "maths",
+            "question": "Quelle est la valeur de x si 2x + 4 = 10 ?",
+            "options": [],
+            "reponse": "",
+            "explication": ""
+        }
+    ]
+}
